@@ -1,0 +1,965 @@
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+
+/* NEW PREMIUM COLOR COMBINATION */
+background:#111827; /* deep royal dark */
+color:#F9F6EE;
+}
+
+/* HEADER */
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:rgba(20,20,30,0.8);
+backdrop-filter:blur(12px);
+}
+
+.logo{
+font-family:'Playfair Display',serif;
+color:#F4C430; /* luxury gold */
+}
+
+nav a{
+margin:0 10px;
+color:#F9F6EE;
+text-decoration:none;
+}
+
+/* HERO */
+.hero{
+height:80vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e') center/cover;
+}
+
+.hero-text{
+background:rgba(0,0,0,0.65);
+padding:35px;
+border-radius:18px;
+}
+
+/* BIG EXPLORE BUTTON */
+.explore-btn{
+display:inline-block;
+margin-top:25px;
+padding:16px 35px;
+font-size:18px;
+background:linear-gradient(45deg,#F4C430,#FFD700);
+color:#111;
+border-radius:40px;
+text-decoration:none;
+font-weight:bold;
+box-shadow:0 0 20px rgba(255,215,0,0.4);
+transition:0.3s;
+}
+
+.explore-btn:hover{
+transform:scale(1.08);
+}
+
+/* CARDS */
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+margin-top:30px;
+}
+
+.card{
+background:rgba(255,255,255,0.06);
+backdrop-filter:blur(14px);
+border-radius:15px;
+padding:20px;
+}
+
+/* BOOK BUTTON NEW */
+.book-btn{
+background:linear-gradient(45deg,#25D366,#1ebe5d);
+color:white;
+padding:15px 28px;
+border:none;
+border-radius:35px;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+box-shadow:0 0 18px rgba(37,211,102,0.6);
+transition:0.3s;
+}
+
+.book-btn:hover{
+transform:scale(1.1);
+}
+
+/* SOCIAL */
+.social a{
+display:inline-block;
+margin:10px;
+color:#F4C430;
+font-size:18px;
+text-decoration:none;
+}
+
+/* SHAKE */
+@keyframes shake{
+0%{transform:translateX(0);}
+25%{transform:translateX(2px);}
+50%{transform:translateX(-2px);}
+75%{transform:translateX(2px);}
+100%{transform:translateX(0);}
+}
+
+/* MOBILE */
+@media(max-width:768px){
+header{flex-direction:column;}
+.hero{height:60vh;}
+}
+/* SERVICE PAGE STYLE */
+.service-block{
+background:rgba(255,255,255,0.05);
+margin:25px auto;
+padding:25px;
+max-width:700px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+text-align:left;
+}
+
+.service-heading{
+color:#F4C430;
+margin-bottom:10px;
+font-size:22px;
+}
+
+.service-block ul{
+padding-left:20px;
+line-height:1.8;
+}
+
+/* CONTACT LAYOUT */
+.contact-wrapper{
+display:flex;
+gap:30px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.contact-box{
+background:rgba(255,255,255,0.05);
+padding:25px;
+border-radius:15px;
+width:320px;
+backdrop-filter:blur(12px);
+}
+
+.contact-note{
+margin-top:15px;
+opacity:0.8;
+}
+
+/* FEEDBACK */
+.feedback-box{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+max-width:500px;
+margin:auto;
+backdrop-filter:blur(12px);
+}
+
+.stars{
+font-size:28px;
+margin:15px 0;
+}
+/* ===== Premium Luxury Button Effect ===== */
+
+.book-btn{
+background: linear-gradient(135deg,#D4AF37,#f5e6a8);
+color:#1A1A1A;
+border:none;
+padding:14px 28px;
+border-radius:30px;
+font-weight:600;
+letter-spacing:0.5px;
+cursor:pointer;
+transition:all 0.35s ease;
+box-shadow:0 4px 15px rgba(212,175,55,0.3);
+position:relative;
+overflow:hidden;
+}
+
+/* Soft Lift Effect */
+.book-btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 10px 25px rgba(212,175,55,0.6);
+}
+
+/* Click Effect */
+.book-btn:active{
+transform:scale(0.96);
+box-shadow:0 3px 10px rgba(0,0,0,0.3);
+}
+
+/* Luxury Shine Animation */
+.book-btn::before{
+content:"";
+position:absolute;
+top:0;
+left:-100%;
+width:100%;
+height:100%;
+background:linear-gradient(
+120deg,
+transparent,
+rgba(255,255,255,0.6),
+transparent
+);
+transition:0.6s;
+}
+
+.book-btn:hover::before{
+left:100%;
+}
+/* ===============================
+   REVIEWS SECTION FIX
+=================================*/
+
+.reviews-section{
+padding:60px 20px;
+text-align:center;
+background:#f9f9f9;
+}
+
+/* reviews ko center karne ke liye */
+.reviews-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+margin-top:30px;
+}
+
+/* single review card */
+.review-card{
+background:white;
+padding:25px;
+border-radius:15px;
+box-shadow:0 8px 25px rgba(0,0,0,0.12);
+max-width:600px;
+width:90%;
+text-align:center;
+transition:0.3s ease;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 35px rgba(0,0,0,0.18);
+}
+
+.review-card h4{
+margin-bottom:10px;
+color:#D4AF37;
+font-size:18px;
+}
+
+.review-card p{
+font-size:15px;
+line-height:1.6;
+color:#333;
+}
+/* ===============================
+   CLIENT LOVE BIG SECTION DESIGN
+=================================*/
+
+.client-love{
+text-align:center;
+padding:60px 20px;
+background:#1A1A1A; /* website ka original dark theme */
+margin:40px 15px;
+border-radius:20px;
+color:white;
+}
+
+/* boxes ko ek line me lane ke liye */
+.love-stats{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+margin-top:25px;
+}
+
+/* single stat box */
+.stat-box{
+background:white;
+padding:25px 35px;
+border-radius:15px;
+box-shadow:0 6px 20px rgba(0,0,0,0.1);
+min-width:150px;
+transition:0.3s;
+}
+
+/* hover effect */
+.stat-box:hover{
+transform:translateY(-5px);
+}
+
+/* numbers style */
+.stat-box h3{
+color:#D4AF37;
+font-size:26px;
+margin-bottom:8px;
+}
+
+/* bottom text */
+.love-text{
+margin-top:20px;
+max-width:700px;
+margin-left:auto;
+margin-right:auto;
+font-size:16px;
+opacity:0.85;
+}
+/* ===============================
+   FEEDBACK PAGE PREMIUM THEME
+=================================*/
+
+.feedback{
+background:#1A1A1A;
+color:#FFFDD0;
+padding:60px 20px;
+text-align:center;
+}
+.feedback-box{
+max-width:600px;
+margin:auto;
+padding:30px;
+border-radius:18px;
+background:rgba(255,255,255,0.05);
+backdrop-filter:blur(12px);
+border:1px solid rgba(212,175,55,0.3);
+box-shadow:0 10px 35px rgba(0,0,0,0.6);
+}
+.feedback-box input,
+.feedback-box textarea{
+width:100%;
+padding:14px;
+margin:12px 0;
+border-radius:10px;
+border:1px solid rgba(212,175,55,0.4);
+background:#111;
+color:#FFFDD0;
+outline:none;
+transition:0.3s;
+}
+
+.feedback-box input:focus,
+.feedback-box textarea:focus{
+border-color:#D4AF37;
+box-shadow:0 0 10px rgba(212,175,55,0.4);
+}
+/* ===============================
+   FEEDBACK REVIEWS DARK PREMIUM
+=================================*/
+
+.reviews-section{
+background:#1A1A1A;
+padding:60px 20px;
+text-align:center;
+}
+
+.reviews-container{
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:25px;
+margin-top:30px;
+}
+
+/* Review Card Premium Style */
+.review-card{
+background:#111;
+padding:25px;
+border-radius:15px;
+max-width:600px;
+width:90%;
+text-align:center;
+color:#FFFDD0;
+border:1px solid rgba(212,175,55,0.25);
+box-shadow:0 8px 25px rgba(0,0,0,0.6);
+transition:0.35s ease;
+}
+
+.review-card:hover{
+transform:translateY(-6px);
+border-color:#D4AF37;
+box-shadow:0 12px 35px rgba(212,175,55,0.25);
+}
+
+.review-card h4{
+color:#D4AF37;
+margin-bottom:10px;
+font-size:18px;
+}
+
+.review-card p{
+color:#ddd;
+line-height:1.6;
+}
+.section-title{
+color:#D4AF37;
+font-family:'Playfair Display',serif;
+letter-spacing:1px;
+margin-bottom:25px;
+}
+/* ===== CLIENT STATS DARK STYLE ===== */
+
+.stat-box{
+background:#111;
+padding:25px 35px;
+border-radius:15px;
+box-shadow:0 6px 20px rgba(0,0,0,0.6);
+min-width:150px;
+transition:0.3s;
+border:1px solid rgba(212,175,55,0.25);
+color:#FFFDD0;
+}
+
+.stat-box:hover{
+transform:translateY(-5px);
+border-color:#D4AF37;
+}
+
+.stat-box h3{
+color:#D4AF37;
+font-size:26px;
+margin-bottom:8px;
+}
+/* ===============================
+   CONTACT PAGE PREMIUM DESIGN
+=================================*/
+
+.contact-intro{
+background:#1A1A1A;
+text-align:center;
+padding:70px 20px 30px;
+color:#FFFDD0;
+}
+
+.contact-intro-text{
+max-width:750px;
+margin:auto;
+line-height:1.8;
+color:#ddd;
+font-size:17px;
+opacity:0.9;
+}
+
+/* Contact Section spacing */
+.contact{
+background:#1A1A1A;
+padding:50px 20px 70px;
+}
+
+.contact-wrapper{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:40px;
+margin-top:30px;
+}
+
+.contact-box{
+background:#111;
+padding:30px;
+border-radius:18px;
+width:320px;
+border:1px solid rgba(212,175,55,0.25);
+box-shadow:0 10px 35px rgba(0,0,0,0.6);
+color:#FFFDD0;
+}
+
+.form-note{
+margin-top:15px;
+font-size:14px;
+color:#bbb;
+}
+
+/* TRUST SECTION */
+
+.contact-trust{
+background:#1A1A1A;
+padding:70px 20px;
+text-align:center;
+}
+
+.trust-grid{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:25px;
+margin-top:30px;
+}
+
+.trust-card{
+background:#111;
+padding:25px;
+border-radius:15px;
+width:260px;
+border:1px solid rgba(212,175,55,0.25);
+transition:0.3s;
+}
+
+.trust-card:hover{
+transform:translateY(-6px);
+border-color:#D4AF37;
+}
+
+.trust-card h3{
+color:#D4AF37;
+margin-bottom:10px;
+}
+
+.trust-card p{
+color:#ccc;
+line-height:1.6;
+}
+/* ===== CALL BUTTON PROFESSIONAL STYLE ===== */
+
+.call-btn{
+display:inline-block;
+text-decoration:none;
+background:linear-gradient(135deg,#D4AF37,#f5e6a8);
+color:#1A1A1A;
+font-weight:600;
+letter-spacing:0.5px;
+}
+
+.call-btn i{
+margin-right:8px;
+}
+
+/* subtle pulse effect */
+.call-btn:hover{
+transform:translateY(-4px) scale(1.03);
+box-shadow:0 12px 30px rgba(212,175,55,0.5);
+}
+/* ===== CONTACT PAGE LUXURY DESIGN ===== */
+
+.contact-hero{
+    text-align:center;
+    padding:70px 20px 40px;
+    max-width:900px;
+    margin:auto;
+}
+
+.contact-hero h2{
+    font-size:32px;
+    margin-bottom:15px;
+}
+
+.contact-hero p{
+    color:#bbb;
+    line-height:1.8;
+    font-size:16px;
+}
+
+/* buttons */
+
+.contact-actions{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin-top:25px;
+    flex-wrap:wrap;
+}
+
+.call-btn{
+    background:#111;
+    color:#fff;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    border:1px solid #333;
+    transition:0.3s;
+}
+
+.call-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+    padding:14px 28px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.4);
+}
+
+
+/* extra section */
+
+.contact-extra{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.extra-grid{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:40px;
+}
+
+.extra-card{
+    background:#111;
+    padding:30px;
+    border-radius:12px;
+    width:260px;
+    border:1px solid #222;
+    transition:0.3s;
+}
+
+.extra-card:hover{
+    transform:translateY(-8px);
+}
+
+.extra-card i{
+    font-size:28px;
+    margin-bottom:15px;
+}
+
+.extra-card p{
+    color:#bbb;
+    line-height:1.6;
+}
+
+.contact-footer{
+    text-align:center;
+    padding:25px;
+    border-top:1px solid #222;
+    color:#888;
+    font-size:14px;
+}
+/* ===== ABOUT PAGE ===== */
+
+.about-hero{
+padding:80px 20px;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.about-section{
+padding:70px 20px;
+max-width:1000px;
+margin:auto;
+line-height:1.8;
+text-align:center;
+}
+
+.about-cards{
+padding:70px 20px;
+text-align:center;
+}
+
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:25px;
+margin-top:40px;
+}
+
+.about-card{
+background:rgba(255,255,255,0.05);
+padding:30px;
+border-radius:15px;
+backdrop-filter:blur(10px);
+transition:0.4s;
+}
+
+.about-card:hover{
+transform:translateY(-8px);
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.about-card i{
+font-size:28px;
+color:#D4AF37;
+margin-bottom:15px;
+}
+
+.about-stats{
+display:flex;
+justify-content:center;
+gap:40px;
+flex-wrap:wrap;
+padding:70px 20px;
+text-align:center;
+}
+
+.stat-box{
+background:rgba(255,255,255,0.05);
+padding:30px 40px;
+border-radius:15px;
+}
+
+.stat-box h3{
+color:#D4AF37;
+font-size:28px;
+margin-bottom:10px;
+}
+/* ===== GALLERY PAGE ===== */
+
+.gallery-hero{
+padding:90px 20px 40px;
+text-align:center;
+max-width:900px;
+margin:auto;
+}
+
+.gallery-intro{
+opacity:0.85;
+line-height:1.8;
+margin-top:15px;
+}
+
+.gallery-section{
+padding:60px 20px;
+}
+
+.gallery-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:22px;
+max-width:1100px;
+margin:auto;
+}
+
+.gallery-grid img{
+width:100%;
+height:340px;
+object-fit:cover;
+border-radius:16px;
+transition:0.45s ease;
+cursor:pointer;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.gallery-grid img:hover{
+transform:scale(1.06);
+box-shadow:0 20px 40px rgba(0,0,0,0.8);
+}
+
+/* MESSAGE SECTION */
+
+.gallery-message{
+text-align:center;
+padding:80px 20px;
+max-width:850px;
+margin:auto;
+line-height:1.9;
+}
+
+/* CTA SECTION */
+
+.gallery-cta{
+text-align:center;
+padding:90px 20px;
+background:rgba(255,255,255,0.03);
+}
+
+.gallery-cta h2{
+margin-bottom:15px;
+}
+
+.gallery-cta p{
+opacity:0.85;
+margin-bottom:30px;
+}
+/* FAQ page styling */
+
+.faq {
+    padding: 40px 20px;
+    background-color: #1A1A1A;
+    color: #FFFDD0;
+}
+
+.faq-box {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: rgba(255, 253, 208, 0.05); /* subtle luxury glass effect */
+    padding: 20px;
+    margin: 15px 0;
+    border-left: 4px solid #D4AF37;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateX(5px);
+}
+
+.faq-item h3 {
+    margin-bottom: 10px;
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+}
+
+.faq-item p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.thought {
+    text-align: center;
+    padding: 50px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.thought h2 {
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+}
+
+.thought p {
+    color: #FFFDD0;
+    font-size: 16px;
+}
+/* FAQ Accordion */
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #FFFDD0;
+    transition: all 0.3s ease;
+}
+
+.faq-question {
+    cursor: pointer;
+    position: relative;
+    font-family: 'Playfair Display', serif;
+    color: #D4AF37;
+    margin-bottom: 5px;
+}
+
+.faq-question::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    color: #D4AF37;
+    transition: transform 0.3s;
+}
+
+.faq-question.active::after {
+    content: '-';
+    transform: rotate(180deg);
+}
+
+/* Booking buttons */
+.faq-booking {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.faq-booking .book-btn {
+    margin: 10px;
+    padding: 15px 30px;
+    background-color: #D4AF37;
+    color: #1A1A1A;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.faq-booking .book-btn:hover {
+    transform: scale(1.05);
+}
+/* Hero title fade-in */
+.hero-title {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 1s forwards 0.5s; /* delay 0.5s */
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* Service card hover scale + shadow */
+.service-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.service-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(212, 175, 55, 0.4); /* gold shadow */
+}
+/* Button pulse animation */
+.book-btn {
+    transition: transform 0.3s, background 0.3s;
+}
+
+.book-btn:hover {
+    transform: scale(1.08);
+    background: linear-gradient(45deg, #D4AF37, #FFFDD0);
+}
+/* Star fill animation on load */
+.feedback-box .stars span {
+    display: inline-block;
+    opacity: 0;
+    transform: scale(0.5);
+    animation: starPop 0.5s forwards;
+}
+
+.feedback-box .stars span:nth-child(1) { animation-delay: 0.1s; }
+.feedback-box .stars span:nth-child(2) { animation-delay: 0.2s; }
+.feedback-box .stars span:nth-child(3) { animation-delay: 0.3s; }
+.feedback-box .stars span:nth-child(4) { animation-delay: 0.4s; }
+.feedback-box .stars span:nth-child(5) { animation-delay: 0.5s; }
+
+@keyframes starPop {
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+/* FAQ answer fade-slide */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+}
+
+.faq-question.active + .faq-answer {
+    max-height: 200px; /* sufficient height */
+    opacity: 1;
+}
